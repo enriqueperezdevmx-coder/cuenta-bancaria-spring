@@ -3,7 +3,7 @@ package com.academia.banco;
 import java.math.BigDecimal;
 import java.time.Clock;
 import java.time.LocalDate;
-
+// MP-1: hoy sus piezas son reales
 public class CajeroAutomatico {
     public static final BigDecimal LIMITE_DIARIO = new BigDecimal("8000.00");
     private final RepositorioCuentas repositorio;
