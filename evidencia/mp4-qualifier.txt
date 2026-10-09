@@ -1,15 +1,14 @@
-[ERROR] COMPILATION ERROR : 
-[ERROR] /home/lenovo1/cuenta-bancaria-spring/src/main/java/com/academia/banco/CajeroAutomatico.java:[23,13] not a statement
-[ERROR] /home/lenovo1/cuenta-bancaria-spring/src/main/java/com/academia/banco/CajeroAutomatico.java:[23,19] ';' expected
-[ERROR] /home/lenovo1/cuenta-bancaria-spring/src/main/java/com/academia/banco/CajeroAutomatico.java:[23,20] not a statement
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.15.0:compile (default-compile) on project cuenta-bancaria-spring: Compilation failure: Compilation failure: 
-[ERROR] /home/lenovo1/cuenta-bancaria-spring/src/main/java/com/academia/banco/CajeroAutomatico.java:[23,13] not a statement
-[ERROR] /home/lenovo1/cuenta-bancaria-spring/src/main/java/com/academia/banco/CajeroAutomatico.java:[23,19] ';' expected
-[ERROR] /home/lenovo1/cuenta-bancaria-spring/src/main/java/com/academia/banco/CajeroAutomatico.java:[23,20] not a statement
-[ERROR] -> [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+Piezas (beans) que creó Spring:
+  configuracionBanco
+  antifraudeEstricto
+  antifraudePorMonto
+  cajeroAutomatico
+  notificadorConsola
+  repositorioEnMemoria
+  reloj
+Saldo de la 001: $10000.00
+  [SMS a la cuenta 001] Retiro de $500.00. Saldo: $9500.00
+Saldo de la 001: $9500.00
+Retiro de $2000.00:
+  Rechazado: Operación rechazada: operación sospechosa
+Saldo de la 001: $9500.00

@@ -3,8 +3,12 @@ package com.academia.banco;
 import java.math.BigDecimal;
 import java.time.Clock;
 import java.time.LocalDate;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
+/**
+ * Un cajero automático. Usa tres servicios que NO son suyos (repositorio, antifraude, SMS) y un reloj.
+ */
 @Component
 public class CajeroAutomatico {
     public static final BigDecimal LIMITE_DIARIO = new BigDecimal("8000.00");
@@ -13,7 +17,8 @@ public class CajeroAutomatico {
     private final Notificador notificador;
     private final Clock reloj;
 
-    public CajeroAutomatico(RepositorioCuentas repositorio, ServicioAntifraude antifraude,
+    public CajeroAutomatico(RepositorioCuentas repositorio,
+                            @Qualifier("antifraudeEstricto") ServicioAntifraude antifraude,
                             Notificador notificador, Clock reloj) {
         this.repositorio = repositorio;
         this.antifraude = antifraude;
