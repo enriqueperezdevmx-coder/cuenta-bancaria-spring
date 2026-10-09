@@ -5,8 +5,10 @@ import java.time.LocalDate;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
+import org.springframework.stereotype.Component;
 
 /** Las cuentas viven en un Map, en memoria: al terminar el programa se pierden. */
+@Component
 public class RepositorioEnMemoria implements RepositorioCuentas {
     private final Map<String, CuentaBancaria> cuentas = new HashMap<>();
 
@@ -24,7 +26,7 @@ public class RepositorioEnMemoria implements RepositorioCuentas {
 
     @Override
     public BigDecimal totalRetiradoEn(String numeroCuenta, LocalDate fecha) {
-        return new BigDecimal("0.00"); // simplificación: este repositorio no lleva la cuenta por día
+        return new BigDecimal("0.00");
     }
 
     @Override

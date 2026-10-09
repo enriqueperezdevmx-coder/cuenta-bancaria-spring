@@ -10,7 +10,7 @@ if ! ./mvnw -q -B compile dependency:build-classpath -Dmdep.outputFile=target/cl
   echo "NO COMPILA: arriba está el error"
   exit 1
 fi
-java -cp "target/classes:$(cat target/classpath.txt)" "com.academia.banco.$clase" 2>&1 | tee "$archivo"
+java -cp "target/classes:$(cat target/classpath.txt)" "com.academia.banco.$clase" 2>&1 | tee -a "$archivo"
 codigo=${PIPESTATUS[0]}
 if [ "$codigo" -ne 0 ]; then
   causa=$(grep "Caused by: " "$archivo" | tail -1)
@@ -18,4 +18,5 @@ if [ "$codigo" -ne 0 ]; then
     echo; echo "La causa (la última línea Caused by: de arriba):"; echo "$causa" | tee -a "$archivo"
   fi
 fi
+echo "→ salida completa en $archivo"
 exit "$codigo"
