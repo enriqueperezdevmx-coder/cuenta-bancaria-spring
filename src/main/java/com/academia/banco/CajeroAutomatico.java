@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
 public class CajeroAutomatico {
     public static final BigDecimal LIMITE_DIARIO = new BigDecimal("8000.00");
     private final RepositorioCuentas repositorio;
-    private final ServicioAntifraude antifraude;
+    private final @Qualifier("antifraudeEstricto") ServicioAntifraude antifraude;
     private final Notificador notificador;
     private final Clock reloj;
 
