@@ -7,7 +7,7 @@
 ```bash
 ./correr.sh App final-app
 ./probar.sh final
-```bash
+
 | Bean | Clase | Cómo lo declara Spring (@Component o @Bean) | Singleton o prototype |
 | :--- | :--- | :--- | :--- |
 | `configuracionBanco` | `ConfiguracionBanco` | `@Configuration` | Singleton |
@@ -36,5 +36,6 @@
 
 5. **En tu proyecto de Empleados de la Semana 3 nunca escribiste `@ComponentScan`. ¿Quién lo hace?**  
    Lo hace automáticamente la anotación `@SpringBootApplication`, ya que es una meta-anotación que incluye por dentro `@ComponentScan` (junto con `@SpringBootConfiguration` y `@EnableAutoConfiguration`), escaneando el paquete raíz de la aplicación y todos sus subpaquetes.
+   ```bash
 
    
